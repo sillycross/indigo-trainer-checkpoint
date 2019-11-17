@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/lemon/indigo_trainer/indigo-trainer-checkpoint/model"
+all_model_checkpoint_paths: "/home/lemon/indigo_trainer/indigo-trainer-checkpoint/model"
