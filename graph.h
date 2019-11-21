@@ -221,7 +221,7 @@ class Graph final : public tensorflow::XlaCompiledCpuFunction {
 
  private:
   // Number of buffers for the compiled computation.
-  static constexpr size_t kNumBuffers = 17;
+  static constexpr size_t kNumBuffers = 20;
 
   static const ::xla::cpu_function_runtime::BufferInfo* BufferInfos() {
     static const ::xla::cpu_function_runtime::BufferInfo
@@ -232,7 +232,10 @@ class Graph final : public tensorflow::XlaCompiledCpuFunction {
 ::xla::cpu_function_runtime::BufferInfo({1026ULL, 1ULL}),
 ::xla::cpu_function_runtime::BufferInfo({640ULL, ~0ULL}),
 ::xla::cpu_function_runtime::BufferInfo({146ULL, 0ULL}),
+::xla::cpu_function_runtime::BufferInfo({128ULL, ~0ULL}),
+::xla::cpu_function_runtime::BufferInfo({128ULL, ~0ULL}),
 ::xla::cpu_function_runtime::BufferInfo({81ULL, ~0ULL}),
+::xla::cpu_function_runtime::BufferInfo({80ULL, ~0ULL}),
 ::xla::cpu_function_runtime::BufferInfo({65ULL, ~0ULL}),
 ::xla::cpu_function_runtime::BufferInfo({16ULL, ~0ULL}),
 ::xla::cpu_function_runtime::BufferInfo({16ULL, ~0ULL}),
@@ -255,7 +258,7 @@ class Graph final : public tensorflow::XlaCompiledCpuFunction {
   }
 
   // The 0-based index of the result tuple in the temporary buffers.
-  static constexpr size_t kResultIndex = 7;
+  static constexpr size_t kResultIndex = 10;
 
   // Array of names of each positional argument, terminated by nullptr.
   static const char** StaticArgNames() {
